@@ -1,6 +1,6 @@
 [build]
 publish = "dist/"
-command = "rustup target add wasm32-unknown-unknown && cargo install wasm-bindgen-cli && cargo install --locked trunk && trunk build --release"
+command = "rustup toolchain install nightly && rustup target add wasm32-unknown-unknown && cargo install wasm-bindgen-cli && cargo install --locked trunk && trunk build --release"
 
 [build.environment]
 RUST_VERSION = "1.80.0"
